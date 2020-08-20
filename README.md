@@ -18,7 +18,7 @@ Steps to perform the test
 7. Attach the container to mediawiki network
     ```docker network connect mediawiki mediawiki```
 
-7. create Docker container for Mysql and configure, Also joined the same container with the same network created in step 6
+8. create Docker container for Mysql and configure, Also joined the same container with the same network created in step 6 . (As in requested it was mentioned it needs to be created on separate VM
 ```
    docker run -d --name mediawiki-mysql \
   --env ALLOW_EMPTY_PASSWORD=yes \
@@ -29,12 +29,17 @@ Steps to perform the test
   --volume mediawiki-mysql:/var/lib/mysql \
    bitnami/mariadb:latest
    ```
+9. Confirm both the container connected to same network 
+   ```
+   docker network connect mediawiki mediawiki
+   docker network connect mediawiki mediawiki-mysql
    
-8. Took outthe ip of database container mediawiki-mysql from ```docker container inspect <id>``` command
-9. Hit the public ip of AWS ec2-instance witht port number 
+   ```
+9. Took outthe ip of database container mediawiki-mysql from ```docker container inspect <id>``` command
+10. Hit the public ip of AWS ec2-instance witht port number 
    #http://34.198.38.111:8080/
-10. Provided private ip of database container while doing database installation on mediawiki
-11. configure it and download localsettip.php
+11. Provided private ip of database container while doing database installation on mediawiki
+12. configure it and download localsettip.php
 
   
  
