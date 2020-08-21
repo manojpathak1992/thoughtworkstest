@@ -1,7 +1,7 @@
 # thoughtworkstest
 
 Steps to perform the test
-1. Created an ec2-instance on aws
+1. Created an ec2-instance on aws, have taken spot instance.
 2. Allocate and Associate elastic ip to ec2-instance
 2. Installed Docker and enabled it
 3. create Dockerfile (attached) 
@@ -37,7 +37,7 @@ Steps to perform the test
    ```
 9. Took outthe ip of database container mediawiki-mysql from ```docker container inspect <id>``` command
 10. Hit the public ip of AWS ec2-instance witht port number 
-   #http://34.198.38.111:8080/ and click on complete the installation
+   #http://http://54.156.58.34:8080/ and click on complete the installation
 11. Provided private ip of database container while doing database installation on mediawiki
 12. configure it and download localsettip.php
 
