@@ -37,7 +37,7 @@ Steps to perform the test
    ```
 9. Took outthe ip of database container mediawiki-mysql from ```docker container inspect <id>``` command
 10. Hit the public ip of AWS ec2-instance witht port number 
-   #http://34.198.38.111:8080/
+   #http://34.198.38.111:8080/ and click on complete the installation
 11. Provided private ip of database container while doing database installation on mediawiki
 12. configure it and download localsettip.php
 
